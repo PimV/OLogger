@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="ologger-ear:ear">
+    <output-path>$PROJECT_DIR$/ologger-ear/target</output-path>
+    <root id="archive" name="ologger-ear-1.0-SNAPSHOT.ear">
+      <element id="artifact" artifact-name="ologger-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

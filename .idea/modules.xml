@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ologger.iml" filepath="$PROJECT_DIR$/ologger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ologger-ear/ologger-ear.iml" filepath="$PROJECT_DIR$/ologger-ear/ologger-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ologger-ejb/ologger-ejb.iml" filepath="$PROJECT_DIR$/ologger-ejb/ologger-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ologger-web/ologger-web.iml" filepath="$PROJECT_DIR$/ologger-web/ologger-web.iml" />
+    </modules>
+  </component>
+</project>

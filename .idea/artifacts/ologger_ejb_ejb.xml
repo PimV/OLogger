@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="ologger-ejb:ejb">
+    <output-path>$PROJECT_DIR$/ologger-ejb/target</output-path>
+    <root id="archive" name="ologger-ejb-1.0-SNAPSHOT.jar">
+      <element id="artifact" artifact-name="ologger-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>
