@@ -3,12 +3,9 @@ package org.legopiraat.service;
 import org.legopiraat.dao.PlayerDao;
 import org.legopiraat.entities.Attack;
 import org.legopiraat.entities.RequestAttack;
-import org.legopiraat.entities.Player;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.List;
 
 @Stateless
 public class AttackParser {

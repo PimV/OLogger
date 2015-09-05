@@ -1,0 +1,44 @@
+<html class="no-js">
+<head>
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <title>OLogger</title>
+    <!-- Include JQuey -->
+    <script type="text/javascript" src="vendor/jquery-2.1.4.min.js"></script>
+
+    <!-- Include AngularJS -->
+    <script type="text/javascript" src="vendor/angular.js"></script>
+    <!-- Include AngularJS Modules -->
+    <script type="text/javascript" src="vendor/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="route.js"></script>
+
+    <!-- Include Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Include custom css -->
+
+    <!-- Load controllers -->
+    <script src="components/home/controller/homeController.js"></script>
+    <script src="components/raid/controller/raidInputController.js"></script>
+    <script src="components/raid/controller/raidOutputController.js"></script>
+
+    <!-- Load Services -->
+    <script src="components/raid/service/raidService.js"></script>
+    <script src="components/player/service/playerService.js"></script>
+
+    <!-- Load Directives -->
+    <script src="components/raid/directive/raidInput.js"></script>
+    <script src="components/raid/directive/allRaids.js"></script>
+
+</head>
+
+
+<body ng-app="OLogger">
+<div ng-view class="col-sm-offset-1">
+
+</div>
+</body>
+</html>
+
+

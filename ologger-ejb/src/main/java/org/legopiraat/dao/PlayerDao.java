@@ -5,6 +5,7 @@ import org.legopiraat.entities.Player;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -23,10 +24,11 @@ public class PlayerDao {
         TypedQuery<Player> typedQuery = entityManager.createQuery(query, Player.class);
         typedQuery.setParameter("playerName", playerName);
 
-        Player player = typedQuery.getSingleResult();
-
-
-        return player;
+        try {
+            return typedQuery.getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 
     public List<Player> getAllPlayers() {

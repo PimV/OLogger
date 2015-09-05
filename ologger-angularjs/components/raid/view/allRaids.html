@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Metal</th>
+        <th>Crystal</th>
+        <th>Deuterium</th>
+        <th>Derbris metal</th>
+        <th>Debris crystal</th>
+    </tr>
+    </thead>
+
+    <tr ng-repeat="raid in raids">
+        <td>{{ raid.metal }}</td>
+        <td>{{ raid.crystal }}</td>
+        <td>{{ raid.deuterium }}</td>
+        <td>{{ raid.debris.metal }}</td>
+        <td>{{ raid.debris.crystal }}</td>
+    </tr>
+
+</table>

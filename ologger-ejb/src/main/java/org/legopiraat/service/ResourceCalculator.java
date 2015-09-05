@@ -3,8 +3,10 @@ package org.legopiraat.service;
 import org.legopiraat.entities.Attack;
 import org.legopiraat.entities.builder.AttackBuilder;
 
+import javax.ejb.Stateless;
 import java.util.List;
 
+@Stateless
 public class ResourceCalculator {
 
     private Attack totalAttack;

@@ -26,7 +26,7 @@ public class AttackDao {
     }
 
     public List<Attack> getAllAttacksByPlayerNameAndDate(String attackDate, String playerName) {
-        String query = "SELECT a from Attack a WHERE a.date = :attackDate AND a.player.name = :playerName";
+        String query = "SELECT a FROM Attack a WHERE a.date = :attackDate AND a.player.name = :playerName";
         TypedQuery<Attack> typedQuery = entityManager.createQuery(query, Attack.class);
         typedQuery.setParameter("attackDate", attackDate);
         typedQuery.setParameter("playerName", playerName);
@@ -35,7 +35,7 @@ public class AttackDao {
     }
 
     public List<Attack> getAllAttacksFromDate(String attackDate) {
-        String query = "SELECT a from Attack a WHERE a.date = :attackDate";
+        String query = "SELECT a FROM Attack a WHERE a.date = :attackDate";
         TypedQuery<Attack> typedQuery = entityManager.createQuery(query, Attack.class);
         typedQuery.setParameter("attackDate", attackDate);
 
