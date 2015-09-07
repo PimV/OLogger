@@ -16,7 +16,4 @@ public class Player {
     private Long id;
 
     private String name;
-
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<History> attackHistory;
 }

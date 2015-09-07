@@ -23,9 +23,9 @@ public class AttackResource {
     @POST
     @Consumes("application/json")
     public Response newAttack(RequestAttack attack) {
-        attackDao.newAttack(attack);
+        Attack addedAttack = attackDao.newAttack(attack);
 
-        return Response.status(Response.Status.OK).build();
+        return Response.status(Response.Status.OK).entity(addedAttack).build();
     }
 
     @GET

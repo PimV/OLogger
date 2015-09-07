@@ -16,7 +16,7 @@ public class History {
 
     private String date;
 
-    @ManyToOne
+    @OneToOne
     private Player player;
 
     @OneToOne(cascade = CascadeType.PERSIST)

@@ -1,20 +1,13 @@
-<form class="form-horizontal">
+<div class="col-sm-6">
+    <form class="form-horizontal">
 
-    <div class="form-group">
-        <div class="col-sm-4">
+        <div class="form-group">
             <h1>New Raid</h1>
+            <textarea class="form-control" rows="2" ng-model="raid.raidInfo"></textarea>
         </div>
-    </div>
 
-    <div class="form-group">
-        <div class="col-sm-3">
-            <textarea class="form-control" rows="3"  ng-model="raid.raidInfo"></textarea>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-sm-2">
+        <div class="form-group">
             <button class="btn btn-primary" ng-click="addNewRaid(raid)">Save</button>
         </div>
-    </div>
-</form>
+    </form>
+</div>

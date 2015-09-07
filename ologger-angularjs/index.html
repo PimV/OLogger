@@ -7,6 +7,12 @@
 
     <!-- Include AngularJS -->
     <script type="text/javascript" src="vendor/angular.js"></script>
+
+    <!-- Include charts -->
+    <script type="text/javascript" src="vendor/Chart.js/Chart.js"></script>
+    <script type="text/javascript" src="vendor/angular-chart.js/angular-chart.js"></script>
+    <link rel="stylesheet" href="vendor/angular-chart.js/dist/angular-chart.css">
+
     <!-- Include AngularJS Modules -->
     <script type="text/javascript" src="vendor/angular-route.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -17,11 +23,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Include custom css -->
+    <link rel="stylesheet" href="resources/css/main.css">
 
     <!-- Load controllers -->
     <script src="components/home/controller/homeController.js"></script>
     <script src="components/raid/controller/raidInputController.js"></script>
-    <script src="components/raid/controller/raidOutputController.js"></script>
+    <script src="components/raid/controller/todaysRaidsController.js"></script>
+    <script src="components/raid/controller/raidHistoryController.js"></script>
 
     <!-- Load Services -->
     <script src="components/raid/service/raidService.js"></script>
@@ -29,13 +37,13 @@
 
     <!-- Load Directives -->
     <script src="components/raid/directive/raidInput.js"></script>
-    <script src="components/raid/directive/allRaids.js"></script>
+    <script src="components/raid/directive/todaysRaids.js"></script>
+    <script src="components/raid/directive/raidHistory.js"></script>
 
 </head>
 
-
-<body ng-app="OLogger">
-<div ng-view class="col-sm-offset-1">
+<body ng-app="OLogger" class="main">
+<div ng-view>
 
 </div>
 </body>

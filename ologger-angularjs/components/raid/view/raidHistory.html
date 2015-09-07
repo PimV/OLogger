@@ -1,0 +1,18 @@
+<h1>Raid history</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Metal</th>
+        <th>Crystal</th>
+        <th>Deuterium</th>
+    </tr>
+    </thead>
+
+    <tr ng-repeat="raid in raidHistory | orderBy:'date'">
+        <td>{{ raid.date }}</td>
+        <td><span>{{raid.attack.metal | number}}</span></td>
+        <td><span>{{raid.attack.crystal | number}}</span></td>
+        <td><span>{{raid.attack.deuterium | number}}</span></td>
+    </tr>
+</table>

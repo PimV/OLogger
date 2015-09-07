@@ -1,0 +1,50 @@
+<div class="col-sm-6">
+    <h1>Today's Raids</h1>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Metal</th>
+            <th>Crystal</th>
+            <th>Deuterium</th>
+            <th>Debris metal</th>
+            <th>Debris crystal</th>
+        </tr>
+        </thead>
+
+        <tr ng-repeat="raid in raids">
+            <td><span>{{raid.metal | number}}</span></td>
+            <td><span>{{raid.crystal | number}}</span></td>
+            <td><span>{{raid.deuterium | number}}</span></td>
+            <td><span>{{raid.debrisMetal | number}}</span></td>
+            <td><span>{{raid.debrisCrystal | number}}</span></td>
+        </tr>
+    </table>
+</div>
+
+<div class="col-sm-off-6 col-sm-6">
+    <h1>Today's total</h1>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Metal</th>
+            <th>Crystal</th>
+            <th>Deuterium</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td><span>{{total.metal | number}}</span></td>
+            <td><span>{{total.crystal | number}}</span></td>
+            <td><span>{{total.deuterium | number}}</span></td>
+        </tr>
+    </table>
+
+    <div class="col-sm-off-6 col-sm-12">
+        <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-legend="true">
+        </canvas>
+    </div>
+</div>
+
+

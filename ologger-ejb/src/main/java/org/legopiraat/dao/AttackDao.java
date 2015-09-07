@@ -19,10 +19,12 @@ public class AttackDao {
     @Inject
     private EntityManager entityManager;
 
-    public void newAttack(RequestAttack attack) {
+    public Attack newAttack(RequestAttack attack) {
         Attack parsedAttack = attackParser.parse(attack);
 
         entityManager.persist(parsedAttack);
+
+        return parsedAttack;
     }
 
     public List<Attack> getAllAttacksByPlayerNameAndDate(String attackDate, String playerName) {
