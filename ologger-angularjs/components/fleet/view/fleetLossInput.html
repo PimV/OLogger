@@ -1,0 +1,156 @@
+<div class="col-sm-12">
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <h1>How much did u loss?</h1>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-2 col-sm-offset-2">
+                <h1 class="center">Begin</h1>
+            </div>
+            <div class="col-sm-2">
+                <h1 class="center">Eind</h1>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="9">Klein vrachterschip</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="9" type="number" ng-model="loss.kleinVrachterschipBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.kleinVrachterschipEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="10">Groot vrachtschip</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="10" type="number" ng-model="loss.grootVrachtschipBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.grootVrachtschipEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="1">Licht gevechtschip</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="1" type="number" ng-model="loss.lichtGevechtBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.lichtGevechtEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="2">Zwaar gevechtschip</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="2" type="number" ng-model="loss.zwaarGevechtBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.zwaarGevechtEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="3">Kruiser</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="3" type="number" ng-model="loss.kuiserBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.kuiserEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="4">Slagschip</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="4" type="number" ng-model="loss.slagschipBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.slagschipEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="6">Bommenwerper</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="6" type="number" ng-model="loss.bommenwerperBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.bommenwerperEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="7">Vernietiger</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="7" type="number" ng-model="loss.vernietigerBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.vernietigerEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="5">Interceptor</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="5" type="number" ng-model="loss.interceptorBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.interceptorEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="8">Ster des doods</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="8" type="number" ng-model="loss.sterDesDoodsBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.sterDesDoodsEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="11">Kolonisatieschip</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="11" type="number" ng-model="loss.kolonisatieschipBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.kolonisatieschipEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="12">Recycler</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="12" type="number" ng-model="loss.recyclerBegin">
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" type="number" ng-model="loss.recyclerEind">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-2 col-sm-offset-2">
+                <button class="btn btn-primary" ng-click="calculateLosses(loss)">Calculate</button>
+            </div>
+        </div>
+
+    </form>
+</div>

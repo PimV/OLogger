@@ -4,6 +4,8 @@ angular.module('RaidModule')
         $scope.addNewRaid = function (raid) {
             raid.attackDate = getCurrentDate();
             RaidService.addNewRaid(raid, $scope.name);
+
+            raid.raidInfo = '';
         };
 
         function getCurrentDate() {

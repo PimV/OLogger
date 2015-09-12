@@ -5,7 +5,7 @@ angular.module('RaidModule')
         $scope.total = {
             metal: 0,
             crystal: 0,
-            deuterium: 0,
+            deuterium: 0
         }
 
         $scope.labels = ["Metal", "Crystal", "Deuterium"];
@@ -17,6 +17,10 @@ angular.module('RaidModule')
             RaidService.getAllRaids($rootScope.name, date)
                 .then(function (response) {
                     $scope.raids = response.data;
+
+                    angular.forEach($scope.raids, function (value, key) {
+                        $scope.updateTodaysTotal(value);
+                    })
                 });
         }
 
@@ -25,7 +29,7 @@ angular.module('RaidModule')
             $scope.total.crystal += data.crystal + data.debrisCrystal;
             $scope.total.deuterium += data.deuterium;
 
-            $scope.data = [$scope.total.metal,  $scope.total.crystal, $scope.total.deuterium];
+            $scope.data = [$scope.total.metal, $scope.total.crystal, $scope.total.deuterium];
         }
 
         function getCurrentDate() {
