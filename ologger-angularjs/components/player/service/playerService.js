@@ -1,7 +1,7 @@
 angular.module('PlayerModule')
     .service('PlayerService', function ($http, $rootScope) {
 
-        var url = 'http://localhost:9000/ologger-web/player';
+        var url = 'http://192.168.0.107:9000/ologger-web/player';
 
         this.login = function (player) {
 

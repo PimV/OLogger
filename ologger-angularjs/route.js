@@ -9,7 +9,8 @@ OLogger.config(['$routeProvider',
                 templateUrl: 'components/raid/view/raid.html'
             })
             .when('/fleetLoss', {
-                templateUrl: 'components/fleet/view/fleetLossInput.html'
+                templateUrl: 'components/fleet/view/fleetLossInput.html',
+                controller: 'FleetLossesController'
             })
             .otherwise({
                 redirectTo: '/'
