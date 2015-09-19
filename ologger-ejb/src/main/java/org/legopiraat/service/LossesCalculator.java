@@ -30,7 +30,11 @@ public class LossesCalculator {
         for (int i = 1; i < losses.length; i = i + 4) {
             String shipName = losses[i];
             int startAmount = new Integer(losses[i + 1]);
-            int endAmount = new Integer(losses[i + 3]);
+            int endAmount = 0;
+
+            if(!shipName.equals("ipr")) {
+                endAmount = new Integer(losses[i + 3]);
+            }
 
             if (endAmount < startAmount && startAmount != endAmount) {
                 allLosses.put(Fleet.getShip(shipName), startAmount - endAmount);

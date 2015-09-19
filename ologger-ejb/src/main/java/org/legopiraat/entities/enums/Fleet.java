@@ -15,7 +15,8 @@ public enum Fleet {
     INTERCEPTOR(new Ship(30000, 40000, 15000)),
     STERDESDOODS(new Ship(5000000, 4000000, 1000000)),
     KOLONISATIESCHIP(new Ship(10000, 20000, 10000)),
-    RECYCLER(new Ship(10000, 6000, 2000));
+    RECYCLER(new Ship(10000, 6000, 2000)),
+    IPR(new Ship(12500, 2500, 10000));
 
     private Ship ship;
 
@@ -53,6 +54,8 @@ public enum Fleet {
                 return Fleet.KOLONISATIESCHIP.getShip();
             case "recycler":
                 return Fleet.RECYCLER.getShip();
+            case "ipr":
+                return Fleet.IPR.getShip();
             default:
                 return null;
         }

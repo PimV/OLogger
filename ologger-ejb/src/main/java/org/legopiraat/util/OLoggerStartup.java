@@ -34,7 +34,7 @@ public class OLoggerStartup {
 
     private void createTrigger() {
         dailyHistoryCalcTrigger = TriggerBuilder.newTrigger().withIdentity("dailyResourceCalculation", "group1")
-                .withSchedule(dailyAtHourAndMinute(12, 00))
+                .withSchedule(dailyAtHourAndMinute(12, 01))
                 .build();
     }
 

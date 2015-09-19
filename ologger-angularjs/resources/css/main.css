@@ -1,8 +1,11 @@
 .main {
-    margin-left: 20px;
-    overflow-x: hidden;
+
 }
 
 .center {
     text-align: center;
+}
+
+.extra-left-padding {
+    padding-left: 30px !important;
 }

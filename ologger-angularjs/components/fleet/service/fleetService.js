@@ -1,7 +1,7 @@
 angular.module('FleetModule')
     .service('FleetService', function ($http, $rootScope) {
 
-        var url = 'http://192.168.0.107:9000/ologger-web/';
+        var url = 'http://89.99.235.245:12346/ologger-web/';
 
         this.addNewLosses = function (losses) {
             $http.post(url + 'fleetLoss', {
