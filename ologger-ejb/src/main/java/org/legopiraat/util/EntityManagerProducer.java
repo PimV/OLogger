@@ -1,5 +1,6 @@
 package org.legopiraat.util;
 
+import javax.ejb.Singleton;
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
@@ -10,7 +11,7 @@ import java.io.Serializable;
 /**
  * Creates Entity manager for CDI in right percistence context.
  */
-@SessionScoped
+@Singleton
 public class EntityManagerProducer implements Serializable {
 
     private static final long serialVersionUID = 1L;

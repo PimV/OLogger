@@ -6,15 +6,19 @@ import org.legopiraat.dao.PlayerDao;
 import org.legopiraat.entities.Attack;
 import org.legopiraat.entities.History;
 import org.legopiraat.entities.Player;
-import org.quartz.*;
 
+import javax.ejb.Schedule;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
 import javax.inject.Inject;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Calendar;
 
-public class DailyResources implements Job {
+@Startup
+@Singleton
+public class DailyResources {
 
     @Inject
     private AttackDao attackDao;
@@ -28,8 +32,9 @@ public class DailyResources implements Job {
     @Inject
     private HistoryDao historyDao;
 
-    @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+
+    @Schedule(dayOfWeek="*", hour="00", minute = "01", persistent = false)
+    public void calculateHistoryForAllPlayers() {
         List<Player> allPlayers = playerDao.getAllPlayers();
 
         allPlayers.stream()
@@ -37,25 +42,17 @@ public class DailyResources implements Job {
     }
 
     private void calculateDailyAttacks(Player player) {
-        List<Attack> allAttacks = attackDao.getAllAttacksByPlayerNameAndDate(player.getName(), getYesterdaysDate());
+        List<Attack> allAttacks = attackDao.getAllAttacksByPlayerNameAndDate(getYesterdaysDate(), player.getName());
 
         Attack historyAttack = resourceCalculator.calculateTotalResources(allAttacks);
 
         History history = new History();
 
         history.setPlayer(player);
-        history.setDate(getTodayDate());
+        history.setDate(getYesterdaysDate());
         history.setAttack(historyAttack);
 
         historyDao.addNewHistory(history);
-    }
-
-    private String getTodayDate() {
-        DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
-
-        Calendar calendar = Calendar.getInstance();
-
-        return df.format(calendar.getTime());
     }
 
     private String getYesterdaysDate() {
