@@ -8,6 +8,10 @@
     <!-- Include AngularJS -->
     <script type="text/javascript" src="vendor/angular.js"></script>
 
+    <!-- Include Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     <!-- Include charts -->
     <script type="text/javascript" src="vendor/Chart.js/Chart.js"></script>
     <script type="text/javascript" src="vendor/angular-chart.js/angular-chart.js"></script>
@@ -17,10 +21,6 @@
     <script type="text/javascript" src="vendor/angular-route.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="route.js"></script>
-
-    <!-- Include Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Include custom css -->
     <link rel="stylesheet" href="resources/css/main.css">
@@ -41,10 +41,33 @@
     <script src="components/raid/directive/raidInput.js"></script>
     <script src="components/raid/directive/todaysRaids.js"></script>
     <script src="components/raid/directive/raidHistory.js"></script>
+    <script src="components/global/directive/backDirective.js"></script>
 
 </head>
 
-<body ng-app="OLogger" class="main">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">OLogger</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><p class="navbar-text">Hello {{ name || "please enter a name" }}</p></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body ng-app="OLogger">
 <div ng-view>
 
 </div>

@@ -15,4 +15,5 @@ OLogger.config(['$routeProvider',
             .otherwise({
                 redirectTo: '/'
             });
+
     }]);

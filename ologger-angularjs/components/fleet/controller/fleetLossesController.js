@@ -1,5 +1,5 @@
 angular.module('FleetModule')
-    .controller('FleetLossesController', function ($scope, FleetService) {
+    .controller('FleetLossesController', function ($scope, $window, FleetService) {
 
         $scope.calculateLosses = function (losses) {
             var formattedLosses = $scope.formatLosses(losses);
@@ -7,6 +7,7 @@ angular.module('FleetModule')
             FleetService.calculateLosses(losses)
                 .then(function (response) {
                     $scope.addNewLosses(response.data);
+                    $window.history.back();
                 })
         };
 

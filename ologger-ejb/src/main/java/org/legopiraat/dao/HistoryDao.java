@@ -22,6 +22,7 @@ public class HistoryDao {
         String query = "SELECT h FROM History h WHERE h.player.name = :playerName";
         TypedQuery<History> typedQuery = entityManager.createQuery(query, History.class);
         typedQuery.setParameter("playerName", playerName);
+        typedQuery.setMaxResults(10);
 
         return typedQuery.getResultList();
     }

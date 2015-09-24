@@ -31,6 +31,7 @@
             <th>Metal</th>
             <th>Crystal</th>
             <th>Deuterium</th>
+            <th>Total</th>
         </tr>
         </thead>
 
@@ -38,11 +39,12 @@
             <td><span>{{total.metal | number}}</span></td>
             <td><span>{{total.crystal | number}}</span></td>
             <td><span>{{total.deuterium | number}}</span></td>
+            <td><span>{{(total.deuterium + total.crystal + total.metal) | number}}</span></td>
         </tr>
     </table>
 
     <div class="col-sm-off-6 col-sm-12">
-        <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-legend="true">
+        <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-legend="true" >
         </canvas>
     </div>
 </div>
